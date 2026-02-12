@@ -1,98 +1,102 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: #e6f2ff;
+body{
+  background:#f0f8ff;
 }
 
-/* Layout principal */
-.layout {
-  display: flex;
-  height: 100vh;
+.container{
+  display:flex;
+  min-height:100vh;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 230px;
-  background: #1e90ff;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
+/* MENU */
+.menu{
+  width:220px;
+  background:#4da6ff;
+  color:white;
+  padding:20px;
 }
 
-.sidebar h2 {
-  margin-bottom: 30px;
-  text-align: center;
+.menu h2{
+  margin-bottom:20px;
 }
 
-.sidebar button {
-  margin-bottom: 10px;
-  padding: 12px;
-  border: none;
-  background: white;
-  color: #1e90ff;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: 0.2s;
+.menu button{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border:none;
+  background:white;
+  color:#4da6ff;
+  font-weight:bold;
+  border-radius:5px;
+  cursor:pointer;
 }
 
-.sidebar button:hover {
-  background: #cce5ff;
+.menu button:hover{
+  background:#e6f3ff;
 }
 
-/* Conteúdo */
-.content {
-  flex: 1;
-  padding: 40px;
+/* CONTEUDO */
+.conteudo{
+  flex:1;
+  padding:20px;
 }
 
-/* Telas */
-.tela {
-  display: none;
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  max-width: 500px;
+.tela h2{
+  margin-bottom:15px;
+  color:#4da6ff;
 }
 
-/* Tela ativa */
-.tela.ativa {
-  display: block;
+input{
+  width:100%;
+  padding:10px;
+  margin-bottom:10px;
+  border:1px solid #ccc;
+  border-radius:5px;
 }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+button{
+  padding:10px 15px;
+  background:#4da6ff;
+  color:white;
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background: #1e90ff;
-  border: none;
-  color: white;
-  border-radius: 6px;
-  cursor: pointer;
-  font-weight: bold;
+button:hover{
+  background:#3399ff;
 }
 
-button:hover {
-  background: #187bcd;
+.cardPedido{
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  margin-bottom:10px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-#resultado {
-  margin-top: 15px;
-  background: #f0f8ff;
-  padding: 10px;
-  border-radius: 6px;
+/* RESPONSIVO */
+@media(max-width:768px){
+  .container{
+    flex-direction:column;
+  }
+
+  .menu{
+    width:100%;
+    display:flex;
+    flex-wrap:wrap;
+    gap:5px;
+  }
+
+  .menu button{
+    flex:1 1 45%;
+    font-size:12px;
+  }
 }

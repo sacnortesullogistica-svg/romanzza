@@ -1,64 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-<meta charset="UTF-8">
-<title>Controle de Volumes - Romanzza</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Sistema de Pedidos</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="layout">
+<div class="container">
 
-  <!-- MENU LATERAL -->
-  <aside class="sidebar">
-    <h2>Romanzza</h2>
-
-    <button onclick="mostrarTela('criar')">📦 Criar Pedido</button>
-    <button onclick="mostrarTela('entrada')">📥 Entrada</button>
-    <button onclick="mostrarTela('saida')">🚚 Saída</button>
-    <button onclick="mostrarTela('consulta')">🔎 Consultar</button>
+  <aside class="menu">
+    <h2>Menu</h2>
+    <button onclick="mostrarTela('criar')">Criar Pedido</button>
+    <button onclick="mostrarTela('entrada')">Registrar Entrada</button>
+    <button onclick="mostrarTela('saida')">Registrar Saída</button>
+    <button onclick="mostrarTela('consulta')">Consultar Pedido</button>
+    <button onclick="mostrarTela('lista')">Lista Geral</button>
   </aside>
 
-  <!-- CONTEÚDO -->
-  <main class="content">
+  <main class="conteudo">
 
-    <!-- Criar Pedido -->
     <section id="criar" class="tela">
       <h2>Criar Pedido</h2>
-
       <input type="text" id="numeroPedido" placeholder="Número do Pedido">
       <input type="number" id="totalVolumes" placeholder="Total de Volumes">
-
-      <button onclick="criarPedido()">Criar Pedido</button>
+      <button onclick="criarPedido()">Criar</button>
     </section>
 
-    <!-- Entrada -->
-    <section id="entrada" class="tela">
+    <section id="entrada" class="tela" style="display:none">
       <h2>Registrar Entrada</h2>
-
       <input type="text" id="pedidoEntrada" placeholder="Número do Pedido">
       <input type="number" id="numeroVolumeEntrada" placeholder="Número do Volume">
-
-      <button onclick="registrarEntrada()">Registrar Entrada</button>
+      <button onclick="registrarEntrada()">Registrar</button>
     </section>
 
-    <!-- Saída -->
-    <section id="saida" class="tela">
+    <section id="saida" class="tela" style="display:none">
       <h2>Registrar Saída</h2>
-
       <input type="text" id="pedidoSaida" placeholder="Número do Pedido">
-
       <button onclick="registrarSaida()">Dar Baixa</button>
     </section>
 
-    <!-- Consulta -->
-    <section id="consulta" class="tela">
+    <section id="consulta" class="tela" style="display:none">
       <h2>Consultar Pedido</h2>
-
       <input type="text" id="pedidoConsulta" placeholder="Número do Pedido">
       <button onclick="consultarPedido()">Consultar</button>
-
       <div id="resultado"></div>
+    </section>
+
+    <section id="lista" class="tela" style="display:none">
+      <h2>Lista Geral de Pedidos</h2>
+      <div id="listaPedidos"></div>
     </section>
 
   </main>
@@ -66,7 +58,7 @@
 </div>
 
 <script type="module" src="app.js"></script>
-<script src="ui.js"></script>
+<script type="module" src="ui.js"></script>
 
 </body>
 </html>
