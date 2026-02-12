@@ -2,101 +2,90 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial, sans-serif;
 }
 
 body{
-  background:#f0f8ff;
+  background:#f4faff;
 }
 
-.container{
-  display:flex;
-  min-height:100vh;
-}
-
-/* MENU */
-.menu{
-  width:220px;
+/* HEADER */
+header{
   background:#4da6ff;
   color:white;
-  padding:20px;
-}
-
-.menu h2{
-  margin-bottom:20px;
-}
-
-.menu button{
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  border:none;
-  background:white;
-  color:#4da6ff;
-  font-weight:bold;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-.menu button:hover{
-  background:#e6f3ff;
-}
-
-/* CONTEUDO */
-.conteudo{
-  flex:1;
-  padding:20px;
-}
-
-.tela h2{
-  margin-bottom:15px;
-  color:#4da6ff;
-}
-
-input{
-  width:100%;
-  padding:10px;
-  margin-bottom:10px;
-  border:1px solid #ccc;
-  border-radius:5px;
-}
-
-button{
-  padding:10px 15px;
-  background:#4da6ff;
-  color:white;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-}
-
-button:hover{
-  background:#3399ff;
-}
-
-.cardPedido{
-  background:white;
   padding:15px;
-  border-radius:8px;
-  margin-bottom:10px;
+  text-align:center;
+}
+
+/* MENU MOBILE */
+.menu-mobile{
+  display:flex;
+  overflow-x:auto;
+  background:white;
+  padding:10px;
+  gap:8px;
   box-shadow:0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* RESPONSIVO */
-@media(max-width:768px){
-  .container{
-    flex-direction:column;
-  }
+.menu-mobile button{
+  flex:1;
+  min-width:90px;
+  padding:10px;
+  border:none;
+  border-radius:8px;
+  background:#4da6ff;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-  .menu{
-    width:100%;
-    display:flex;
-    flex-wrap:wrap;
-    gap:5px;
-  }
+/* MAIN */
+main{
+  padding:15px;
+}
 
-  .menu button{
-    flex:1 1 45%;
-    font-size:12px;
-  }
+.tela h2{
+  color:#4da6ff;
+  margin-bottom:15px;
+}
+
+/* INPUT */
+input{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+  font-size:16px;
+}
+
+/* BOTÃO PRINCIPAL */
+.btn-principal{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:8px;
+  background:#4da6ff;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+}
+
+/* RESULTADO */
+.resultado{
+  margin-top:15px;
+  background:white;
+  padding:15px;
+  border-radius:8px;
+  box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* CARD PEDIDO */
+.cardPedido{
+  background:white;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:12px;
+  box-shadow:0 3px 6px rgba(0,0,0,0.1);
+  font-size:15px;
 }
